@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Hirundo</title>
+    <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./style.css" rel="stylesheet">
+</head>
+<body>
+<h1 align="center"> Welcome to Hirundo </h1>
+
+<div class="center" id="navbarContainer">
+    <ul id="navbar">
+        <li>
+            <button id="follow" type="button" class="btn btn-primary" data-toggle="modal" href="#followList">List of
+                users
+            </button>
+            <button id="logout" type="button" class="btn btn-primary">
+            Log out
+            </button>
+        </li>
+    </ul>
+</div>
+<div id="dodo" class="center">
+    <div>
+        <div class="row">
+            <div id="messageContainer">
+                <textarea class="center" id="message" rows="4"></textarea>
+            </div>
+            <div class="row">
+                <h4 id="characters"></h4>
+                <button id="saveMessage">Save message</button>
+            </div>
+        </div>
+        <div id="timeline">
+
+        </div>
+    </div>
+</div>
+
+<!--Register modal-->
+<div id="followList" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog"
+     aria-labelledby="mySmallModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                <h2 class="modal-title" align="center">Register</h4>
+            </div>
+            <div class="modal-body">
+                <ul id="listOfUsers">
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script data-main="scripts/profile" src="bower_components/requirejs/require.js"></script>
+<script type="text/x-handlebars-template" id="userFollowed">
+    <li>
+        <div class="row followUserRow">
+            <a>{{username}}</a>
+            <button class="unfollowUser btn-warning rightAlignedButton" data-user-id="{{_id}}">Unfollow</button>
+        </div>
+    </li>
+</script>
+<script type="text/x-handlebars-template" id="userNotFollowed">
+    <li>
+        <div class="row followUserRow">
+            <a>{{username}}</a>
+            <button class="followUser btn-primary rightAlignedButton" data-user-id="{{_id}}">Follow</button>
+        </div>
+    </li>
+</script>
+<script type="text/x-handlebars-template" id="messageTemplate">
+    <div class="message">
+        <h4 class="messageHeader">{{username}} wrote on {{dateRegistered}}:</h4>
+        <div class="messageContent">
+            <p>{{text}}</p>
+        </div>
+    </div>
+</script>
+
+</body>
+</html>

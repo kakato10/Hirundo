@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Hirundo</title>
+    <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./style.css" rel="stylesheet">
+</head>
+<body>
+<h1 align="center"> Welcome to Hirundo </h1>
+<div id="navbarContainer">
+    <ul id="navbar">
+        <li>
+            <button id="logIn" type="button" class="btn btn-primary" data-toggle="modal" href="#logInModal">Log in</button>
+        </li>
+        <li class="center">
+            <button id="reggister" type="button" class="btn btn-primary" data-toggle="modal" href="#registerModal">
+                Register
+            </button>
+        </li>
+    </ul>
+</div>
+
+<!--Logging modal-->
+<div id="logInModal" class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog"
+     aria-labelledby="mySmallModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                <h2 class="modal-title">Log in</h4>
+            </div>
+            <div class="modal-body">
+                <label>
+                    Username: <input id="usernameLogIn" type="text"><br>
+                </label>
+                <label>
+                    Password: <input id="passwordLogIn" type="password"><br>
+                </label>
+            </div>
+            <div class="modal-footer">
+                <button id="cancelLogIn" type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                <button id="confirmLogIn" type="button" class="btn btn-primary">Confirm</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--Register modal-->
+<div id="registerModal" class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog"
+     aria-labelledby="mySmallModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                <h2 class="modal-title">Register</h4>
+            </div>
+            <div class="modal-body">
+                <label>
+                    Username:<br> <input id="usernameRegister" type="text"><br>
+                </label>
+                <label>
+                    Password:<br> <input id="passwordRegister" type="password"><br>
+                </label>
+                <label>
+                    Confirm Password:<br> <input id="passwordConfirmRegister" type="password"><br>
+                </label>
+                <label>
+                    Email:<br> <input id="emailRegister" type="text"><br>
+                </label>
+
+            </div>
+            <div class="modal-footer">
+                <button id="cancelRegister" type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                <button id="register" type="button" class="btn btn-primary">Confirm</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script data-main="scripts/app" src="bower_components/requirejs/require.js"></script>
+
+</body>
+</html>

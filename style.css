@@ -1,0 +1,102 @@
+#navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#dodo {
+    width: 700px;
+}
+
+.center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+li {
+    display: inline;
+}
+
+#message {
+    border: none;
+    width: 100%;
+    margin: 2mm;
+    outline: none;
+}
+
+.messageHeader {
+    font-style: oblique;
+}
+
+#messageContainer {
+    border:1px solid;
+    overflow: hidden;
+    border-radius: 20px;
+    border-color: darkblue;
+    margin: 2mm;
+    padding: 0mm;
+}
+
+#characters {
+    display: inline-block;
+}
+
+#saveMessage {
+    display: inline-block;
+    float: right;
+}
+
+.rightAlignedButton {
+    float: right;
+    margin-right: 1cm;
+    width: 100px;
+}
+
+.charactersExceeded {
+    outline: none !important;
+    border: 1px solid red;
+    box-shadow: 0 0 10px #719ECE;
+}
+
+.followUserRow {
+    margin: 2mm;
+}
+
+.messageContent {
+    background-color: white;
+    border-radius: 20px;
+    padding: 1mm;
+}
+
+#navbar {
+    margin: 2mm;
+}
+
+#timeline {
+    padding: 1cm;
+}
+
+.message {
+    background-color: #a6e1ec;
+    border: 1px solid;
+    border-radius: 20px;
+    border-color: #00b3ee;
+    padding-left: 6mm;
+    padding-right: 6mm;
+    padding-top: 2mm;
+    padding-bottom: 2mm;
+    margin: 2mm;
+}
+
+#navbarContainer {
+    text-align: center;
+}
+
+#navbarContainer ul {
+    list-style: none;
+}
+
+#navbarContainer ul li {
+    display: inline;
+}
+
